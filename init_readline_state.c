@@ -6,11 +6,11 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 18:34:23 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 15:40:40 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "readline.h"
+#include "readline_internal.h"
 
 void		init_readline_state(size_t prompt_len)
 {

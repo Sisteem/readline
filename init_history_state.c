@@ -6,11 +6,11 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/13 16:33:31 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/02/26 08:26:55 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "readline.h"
+#include "readline_internal.h"
 
 void	init_history_state(void)
 {

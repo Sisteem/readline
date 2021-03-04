@@ -6,11 +6,11 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 23:08:39 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 16:16:42 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "readline.h"
+#include "readline_internal.h"
 
 char		*submit_command(void)
 {

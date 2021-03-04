@@ -6,11 +6,11 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 09:41:18 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 15:06:07 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "readline.h"
+#include "readline_internal.h"
 
 t_bool
 g_is_interrupted;

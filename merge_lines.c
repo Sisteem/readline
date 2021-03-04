@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   merge_lines.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 00:30:00 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/11/30 20:26:14 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "readline.h"
+#include "readline_internal.h"
 
 void merge_lines(int dest_line, int src_line)
 {

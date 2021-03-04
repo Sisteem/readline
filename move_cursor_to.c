@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   move_cursor_to.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 01:33:04 by mel-idri          #+#    #+#             */
-/*   Updated: 2020/12/07 19:19:11 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "readline.h"
+#include "readline_internal.h"
 
 static int	get_cursor_line_index(int line, int cursor_line_pos)
 {

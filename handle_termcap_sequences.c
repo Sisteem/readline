@@ -6,11 +6,11 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 19:16:38 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 15:24:00 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "readline.h"
+#include "readline_internal.h"
 
 static t_termcap_seq	g_termcap_sequences[TERMCAP_SEQ_COUNT] = {
 	{"\e[1;5A", goto_previous_line},
