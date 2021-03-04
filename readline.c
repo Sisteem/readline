@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 20:54:11 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 15:34:28 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:05:47 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ t_readline_ret	readline_21sh(char **line, char *prompt)
 	else
 		return (LINE);
 }
-
+#ifdef TST
 int				main(void)
 {
 	char	*line;
@@ -119,3 +119,4 @@ int				main(void)
 	}
 	return (0);
 }
+#endif
