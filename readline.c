@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 20:54:11 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/05 16:09:59 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/05 16:34:23 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char			*readline_read_loop(void)
 {
 	t_bool	is_in_seq;
 	char	c;
-	int 	ret;
+	int		ret;
 
 	is_in_seq = FALSE;
 	while ((ret = read(0, &c, 1)) > 0)
@@ -101,4 +101,3 @@ t_readline_ret	readline_21sh(char **line, char *prompt)
 	else
 		return (LINE);
 }
-

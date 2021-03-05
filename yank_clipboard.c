@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 02:09:04 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/05 16:33:55 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ static void	insert_lines(char **lines, char *line_remainder)
 	{
 		dyn_str_dup(&line, lines[i]);
 		vector_insert((t_vector*)rl->lines, &line, rl->current_line + 1 + i);
-		i++;	
+		i++;
 	}
 	rl->current_line += --i;
 	dyn_str_append(rl->lines->array + rl->current_line, line_remainder);
 	rl->cursor_line_pos = rl->lines->array[rl->current_line].len -
-		ft_strlen(line_remainder) ;
+		ft_strlen(line_remainder);
 }
 
 void		yank_clipboard(void)
@@ -41,7 +41,7 @@ void		yank_clipboard(void)
 	lines = ft_strsplit(rl->clipboard->str, '\n', ALLOW_EMPTY_WORD);
 	line_remainder = ft_strdup(rl->lines->array[rl->current_line].str +
 		rl->cursor_line_pos);
-	dyn_str_delete(rl->lines->array + rl->current_line, rl->cursor_line_pos, 
+	dyn_str_delete(rl->lines->array + rl->current_line, rl->cursor_line_pos,
 		TO_END, 0);
 	dyn_str_append(rl->lines->array + rl->current_line, lines[0]);
 	insert_lines(lines, line_remainder);

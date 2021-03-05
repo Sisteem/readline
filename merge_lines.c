@@ -6,13 +6,13 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 00:30:00 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/05 16:31:58 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "readline_internal.h"
 
-void merge_lines(int dest_line, int src_line)
+void	merge_lines(int dest_line, int src_line)
 {
 	t_dynstr_vector *const	lines = g_rl_state.lines;
 

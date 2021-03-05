@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 20:12:08 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 15:32:26 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/05 16:32:32 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ typedef struct		s_hist_vector
 }					t_hist_vector;
 typedef struct		s_history_state
 {
-	int			current_entry;
+	int				current_entry;
 	t_hist_vector	*entries;
 	t_dynstr_vector	*stage;
 }					t_history_state;

@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 19:16:38 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/05 16:24:38 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static t_match_state	match_termcap_sequence(char *buf, size_t buf_len,
 		if (ft_strncmp(buf, g_termcap_sequences[i].seq, buf_len) == 0)
 		{
 			is_partially_matched = TRUE;
-			if(ft_strequ(buf, g_termcap_sequences[i].seq))
+			if (ft_strequ(buf, g_termcap_sequences[i].seq))
 			{
 				*termcap_seq = (t_termcap_seq*)g_termcap_sequences + i;
 				return (MATCH);
@@ -51,7 +51,7 @@ static t_match_state	match_termcap_sequence(char *buf, size_t buf_len,
 		return (PARTIAL_MATCH);
 	else
 		return (MISMATCH);
-}		
+}
 
 int						handle_termcap_sequences(char *c)
 {
