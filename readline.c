@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 20:54:11 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/05 16:09:59 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,22 +101,4 @@ t_readline_ret	readline_21sh(char **line, char *prompt)
 	else
 		return (LINE);
 }
-#ifdef TST
-int				main(void)
-{
-	char	*line;
 
-	while ((line = readline("readline $> ")))
-	{
-		if (ft_strequ("q", line))
-		{
-			free(line);
-			return (0);
-		}
-		else
-			ft_putendl_fd(line, 1);
-		free(line);
-	}
-	return (0);
-}
-#endif
