@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mel-idri <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/29 16:45:44 by mel-idri          #+#    #+#              #
-#    Updated: 2020/12/12 14:47:03 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/03/05 09:26:34 by mel-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,14 +42,6 @@ LIBFT_SRC = ft_autoalloc.c ft_nbrlen.c ft_nbrlen_base.c ft_atoi.c \
 	ft_free_2d_chr_array.c ft_free_ptr.c ft_iscntrl.c
 LIBFT_OBJ = $(addprefix $(OBJS_DIR)/, $(LIBFT_SRC:.c=.o))
 
-PRINTF_INC = ft_printf/ft_printf.h
-PRINTF_SRC = conv_di.c conv_u.c conv_o.c conv_c.c conv_s.c conv_f.c \
-	conv_f_helper.c conv_percenatge.c conv_x.c conv_p.c \
-	ft_printf.c parser.c \
-	util.c apply_conv_function.c read_numbers.c \
-	get_whole.c get_fraction.c round_float.c
-PRINTF_OBJ = $(addprefix $(OBJS_DIR)/, $(PRINTF_SRC:.c=.o))
-
 VECTOR_INC = vector/vector.h vector/internal/vector_internal.h
 VECTOR_SRC = vector_free.c vector_grow.c vector_init.c \
 	vector_insert.c vector_pop.c vector_pop_index.c vector_push.c \
@@ -65,7 +57,7 @@ DYNSTR_OBJ = $(addprefix $(OBJS_DIR)/, $(DYNSTR_SRC:.c=.o))
 
 OBJS_DIR = objs
 
-ALL_OBJS = $(LIBFT_OBJ) $(PRINTF_OBJ) $(VECTOR_OBJ) $(DYNSTR_OBJ)
+ALL_OBJS = $(LIBFT_OBJ) $(VECTOR_OBJ) $(DYNSTR_OBJ)
 
 all: $(NAME)
 
@@ -82,13 +74,11 @@ objs/%.o : */%.c
 objs/%.o : */*/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(LIBFT_OBJ): $(LIBFT_INC) | $(OBJS_DIR)
+$(ALL_OBJS) : $(LIBFT_INC) | $(OBJS_DIR)
 
-$(PRINTF_OBJ): $(LIBFT_INC) $(PRINTF_INC) | $(OBJS_DIR) 
+$(VECTOR_OBJ): $(VECTOR_INC)
 
-$(VECTOR_OBJ): $(LIBFT_INC) $(VECTOR_INC) | $(OBJS_DIR) 
-
-$(DYNSTR_OBJ): $(LIBFT_INC) $(DYNSTR_INC) | $(OBJS_DIR) 
+$(DYNSTR_OBJ): $(DYNSTR_INC)
 
 $(OBJS_DIR):
 	mkdir objs
