@@ -6,7 +6,7 @@
 #    By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/28 10:25:34 by mel-idri          #+#    #+#              #
-#    Updated: 2021/03/05 10:01:05 by mel-idri         ###   ########.fr        #
+#    Updated: 2021/03/07 10:50:41 by mel-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,8 @@ $(NAME): $(OBJS) $(LIBFT)
 	ar r $(TMP_NAME) $(OBJS)
 	objcopy --redefine-syms redefined_symbols $(TMP_NAME)
 	mv $(TMP_NAME) $(NAME)
-	rm -f redefined_symbols $(TMP_NAME)
+	ranlib $(NAME)
+	rm -f redefined_symbols
 objs/%.o : %.c | objs
 	$(CC) $(CFLAGS) -c $< -o $@ 
 
