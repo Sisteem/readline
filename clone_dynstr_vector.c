@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/13 23:50:41 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/08 16:31:05 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ t_dynstr_vector	*clone_dynstr_vector(t_dynstr_vector *orig_dynstr_vector)
 		return (NULL);
 	i = 0;
 	vec = (t_dynstr_vector*)safe_malloc(sizeof(t_vector));
-	vec->capacity = orig_dynstr_vector->capacity;
-	vec->length = orig_dynstr_vector->length;
+	*vec = *orig_dynstr_vector;
 	vec->array = (t_dyn_str*)safe_malloc(vec->capacity * sizeof(t_dyn_str));
 	while (i < vec->length)
 	{
