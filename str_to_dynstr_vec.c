@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 10:54:02 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/07 14:59:04 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ t_dynstr_vector	*str_to_dynstr_vec(char *str)
 		vector_push((void*)dynstr_vec, &dynstr);
 		i++;
 	}
-	free(lines);
+	ft_free_2d_chr_array(lines);
 	return (dynstr_vec);
 }
