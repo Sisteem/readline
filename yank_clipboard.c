@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 02:09:04 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/05 16:33:55 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/08 17:28:44 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void		yank_clipboard(void)
 	dyn_str_append(rl->lines->array + rl->current_line, lines[0]);
 	insert_lines(lines, line_remainder);
 	free(line_remainder);
+	ft_free_2d_chr_array(lines);
 	tputs(tgetstr("cd", NULL), 1, ft_putchar);
 	ft_putstr(rl->clipboard->str);
 	update_lines();
