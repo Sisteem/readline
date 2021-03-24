@@ -6,7 +6,7 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 20:12:04 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 17:34:00 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/24 17:51:41 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void			mark_hist_entry_as_dirty(void);
 char			*submit_command();
 void			test_multiline(void);
 int				reprint_char(void);
-int				check_used_capabilities(void);
+void			check_used_capabilities(void);
 void			reset_readline_state(void);
 void			free_history_allocs(void);
 t_dynstr_vector	*str_to_dynstr_vec(char *str);

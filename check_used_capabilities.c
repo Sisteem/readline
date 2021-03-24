@@ -6,13 +6,13 @@
 /*   By: mel-idri <mel-idri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 15:35:13 by mel-idri          #+#    #+#             */
-/*   Updated: 2021/03/04 17:30:12 by mel-idri         ###   ########.fr       */
+/*   Updated: 2021/03/24 17:51:23 by mel-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "readline_internal.h"
 
-int	check_used_capabilities(void)
+void	check_used_capabilities(void)
 {
 	int				i;
 	char *const		used_capabilities[9] =
@@ -24,8 +24,7 @@ int	check_used_capabilities(void)
 	while (used_capabilities[i])
 	{
 		if (tgetstr(used_capabilities[i], NULL) == NULL)
-			return (-1);
+			exit_error("tgetstr: terminal type not supported");
 		i++;
 	}
-	return (0);
 }
